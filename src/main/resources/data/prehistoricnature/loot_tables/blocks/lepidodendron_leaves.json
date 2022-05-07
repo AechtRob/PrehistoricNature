@@ -34,7 +34,7 @@
                   ]
                 }
               ],
-              "name": "preshistoricnature:lepidodendron_leaves"
+              "name": "prehistoricnature:lepidodendron_leaves"
             },
             {
               "type": "minecraft:item",
@@ -53,7 +53,7 @@
                   ]
                 }
               ],
-              "name": "preshistoricnature:lepidodendron_sapling"
+              "name": "prehistoricnature:lepidodendron_sapling"
             }
           ]
         }

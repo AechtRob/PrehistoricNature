@@ -14,4 +14,5 @@ public class ModPlacedFeatures {
                 RarityFilter.onAverageOnceEvery(12)
             ));
 
+
 }

@@ -12,7 +12,7 @@ public class LepidodendronTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(Random pRandom, boolean pLargeHive) {
-        return ModConfiguredFeatures.LEPIDODENDRON;
+        return ModConfiguredFeatures.LEPIDODENDRON_TREE;
     }
 
 }

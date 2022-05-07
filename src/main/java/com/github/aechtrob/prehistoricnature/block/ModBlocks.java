@@ -29,9 +29,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricNature.MOD_ID);
 
-    public static final RegistryObject<Block> LEPIDODENDRON_SAPLING = registerBlock("lepidodendron_sapling",
-            () -> new SaplingBlock(new LepidodendronTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), PNCreativeTab.PN_PLANTS);
-    public static final RegistryObject<Block> LEPIDODENDRON_LOG = registerBlock("lepidodendron_log",
+   public static final RegistryObject<Block> LEPIDODENDRON_LOG = registerBlock("lepidodendron_log",
             () -> new LepidodendronLog(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), PNCreativeTab.PN_PLANTS);
     public static final RegistryObject<Block> LEPIDODENDRON_WOOD = registerBlock("lepidodendron_wood",
             () -> new LepidodendronWood(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), PNCreativeTab.PN_PLANTS);
@@ -45,6 +43,8 @@ public class ModBlocks {
             () -> new PNLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), PNCreativeTab.PN_PLANTS);
     public static final RegistryObject<Block> LEPIDODENDRON_STROBILUS = registerBlock("lepidodendron_strobilus",
             () -> new LepidodendronStrobilus(BlockBehaviour.Properties.copy(Blocks.GRASS)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> LEPIDODENDRON_SAPLING = registerBlock("lepidodendron_sapling",
+            () -> new SaplingBlock(new LepidodendronTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), PNCreativeTab.PN_PLANTS);
 
     public static final RegistryObject<Block> LEPIDOPTERIS = registerBlock("lepidopteris",
             () -> new Lepidopteris(BlockBehaviour.Properties.copy(Blocks.FERN)), PNCreativeTab.PN_PLANTS);

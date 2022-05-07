@@ -21,9 +21,8 @@ public class ModTreeGeneration {
 
         if (types.contains(BiomeDictionary.Type.SWAMP)) {
             List<Holder<PlacedFeature>> base =
-                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+                event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            //THIS LINE CRASHES THE GAME:
             base.add(ModPlacedFeatures.LEPIDODENDRON_PLACED);
         }
     }

@@ -1,11 +1,6 @@
 package com.github.aechtrob.prehistoricnature.world.features.tree;
 
-import com.github.aechtrob.prehistoricnature.block.ModBlocks;
-import com.github.aechtrob.prehistoricnature.block.customblock.PNDecayableDirectional;
-import com.github.aechtrob.prehistoricnature.block.customblock.PNLog;
-import com.google.common.collect.Lists;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelSimulatedReader;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
@@ -13,7 +8,6 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 
-import java.util.List;
 import java.util.Random;
 import java.util.function.BiConsumer;
 
@@ -25,7 +19,7 @@ public abstract class PNTrunkPlacer extends TrunkPlacer {
 
     @Override
     protected TrunkPlacerType<?> type() {
-        return null;
+        return TrunkPlacerType.STRAIGHT_TRUNK_PLACER;
     }
 
     protected void setFoliage(LevelSimulatedReader levelSimulatedReader, BiConsumer<BlockPos, BlockState> biConsumer, Random random, TreeConfiguration treeConfiguration, int ii, FoliagePlacer.FoliageAttachment foliageAttachment, int p_161366_, int p_161367_, int p_161368_) {
