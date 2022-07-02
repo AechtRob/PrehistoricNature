@@ -1,15 +1,13 @@
 package com.github.aechtrob.prehistoricnature.block;
 
 import com.github.aechtrob.prehistoricnature.PrehistoricNature;
-import com.github.aechtrob.prehistoricnature.block.PNblock.LepidodendronLog;
-import com.github.aechtrob.prehistoricnature.block.PNblock.LepidodendronStrobilus;
-import com.github.aechtrob.prehistoricnature.block.PNblock.LepidodendronWood;
-import com.github.aechtrob.prehistoricnature.block.PNblock.Lepidopteris;
+import com.github.aechtrob.prehistoricnature.block.PNblock.*;
 import com.github.aechtrob.prehistoricnature.block.customblock.PNLeaves;
 import com.github.aechtrob.prehistoricnature.block.customblock.PNLog;
 import com.github.aechtrob.prehistoricnature.block.customblock.PNPlanks;
 import com.github.aechtrob.prehistoricnature.item.ModItems;
 import com.github.aechtrob.prehistoricnature.item.PNCreativeTab;
+import com.github.aechtrob.prehistoricnature.world.features.tree.diaphorodendron.DiaphorodendronTreeGrower;
 import com.github.aechtrob.prehistoricnature.world.features.tree.lepidodendron.LepidodendronTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,7 +27,25 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PrehistoricNature.MOD_ID);
 
-   public static final RegistryObject<Block> LEPIDODENDRON_LOG = registerBlock("lepidodendron_log",
+    public static final RegistryObject<Block> DIAPHORODENDRON_LOG = registerBlock("diaphorodendron_log",
+            () -> new DiaphorodendronLog(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> DIAPHORODENDRON_WOOD = registerBlock("diaphorodendron_wood",
+            () -> new DiaphorodendronWood(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> STRIPPED_DIAPHORODENDRON_LOG = registerBlock("diaphorodendron_log_stripped",
+            () -> new PNLog(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> STRIPPED_DIAPHORODENDRON_WOOD = registerBlock("diaphorodendron_wood_stripped",
+            () -> new PNLog(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> DIAPHORODENDRON_PLANKS = registerBlock("diaphorodendron_planks",
+            () -> new PNPlanks(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> DIAPHORODENDRON_LEAVES = registerBlock("diaphorodendron_leaves",
+            () -> new PNLeaves(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> DIAPHORODENDRON_STROBILUS = registerBlock("diaphorodendron_strobilus",
+            () -> new DiaphorodendronStrobilus(BlockBehaviour.Properties.copy(Blocks.GRASS)), PNCreativeTab.PN_PLANTS);
+    public static final RegistryObject<Block> DIAPHORODENDRON_SAPLING = registerBlock("diaphorodendron_sapling",
+            () -> new SaplingBlock(new DiaphorodendronTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), PNCreativeTab.PN_PLANTS);
+
+    
+    public static final RegistryObject<Block> LEPIDODENDRON_LOG = registerBlock("lepidodendron_log",
             () -> new LepidodendronLog(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), PNCreativeTab.PN_PLANTS);
     public static final RegistryObject<Block> LEPIDODENDRON_WOOD = registerBlock("lepidodendron_wood",
             () -> new LepidodendronWood(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), PNCreativeTab.PN_PLANTS);
@@ -46,6 +62,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> LEPIDODENDRON_SAPLING = registerBlock("lepidodendron_sapling",
             () -> new SaplingBlock(new LepidodendronTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), PNCreativeTab.PN_PLANTS);
 
+    
     public static final RegistryObject<Block> LEPIDOPTERIS = registerBlock("lepidopteris",
             () -> new Lepidopteris(BlockBehaviour.Properties.copy(Blocks.FERN)), PNCreativeTab.PN_PLANTS);
 

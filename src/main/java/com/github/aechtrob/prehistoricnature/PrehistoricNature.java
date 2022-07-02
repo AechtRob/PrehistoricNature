@@ -38,6 +38,10 @@ public class PrehistoricNature
     }
 
     private void setupClient(final FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DIAPHORODENDRON_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DIAPHORODENDRON_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DIAPHORODENDRON_STROBILUS.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEPIDODENDRON_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEPIDODENDRON_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEPIDODENDRON_STROBILUS.get(), RenderType.cutout());

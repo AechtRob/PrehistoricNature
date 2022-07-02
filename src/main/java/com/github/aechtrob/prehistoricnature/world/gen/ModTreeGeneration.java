@@ -24,6 +24,7 @@ public class ModTreeGeneration {
                 event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(ModPlacedFeatures.LEPIDODENDRON_PLACED);
+            base.add(ModPlacedFeatures.DIAPHORODENDRON_PLACED);
         }
     }
 }
