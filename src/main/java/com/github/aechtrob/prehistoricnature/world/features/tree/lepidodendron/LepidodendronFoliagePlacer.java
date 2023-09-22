@@ -1,6 +1,5 @@
 package com.github.aechtrob.prehistoricnature.world.features.tree.lepidodendron;
 
-import com.github.aechtrob.prehistoricnature.PrehistoricNature;
 import com.github.aechtrob.prehistoricnature.block.ModBlocks;
 import com.github.aechtrob.prehistoricnature.block.customblock.PNDecayableDirectional;
 import com.github.aechtrob.prehistoricnature.world.features.tree.PNTreeFeature;
@@ -39,6 +38,7 @@ public class LepidodendronFoliagePlacer extends BlobFoliagePlacer {
                 state = leafState;
                 break;
         }
+
         if (PNTreeFeature.canLeavesReplaceBlock(levelSimulatedReader, pos)) {
             biConsumer.accept(pos, state);
         }

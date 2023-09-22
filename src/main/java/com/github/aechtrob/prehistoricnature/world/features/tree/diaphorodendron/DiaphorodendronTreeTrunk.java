@@ -417,7 +417,6 @@ public class DiaphorodendronTreeTrunk extends PNTrunkPlacer {
             }
         }
 
-        
         //Strobili:
         if ((Math.random() > 0.4)) {
             list.add(new FoliagePlacer.FoliageAttachment(pos.offset(3, counter - 2, 0), 1, true));
